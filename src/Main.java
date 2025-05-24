@@ -27,12 +27,13 @@ public class Main {
             else // handles name substrings in between
                 nameSubstrings.add(name.substring(delimiterIndexes.get(i)+1, delimiterIndexes.get(i+1)));
         }
-
+        System.out.println("Email:");
         for(byte i = 0; i <= delimiterIndexes.size(); i++)
             System.out.print(i<delimiterIndexes.size()
                     ? nameSubstrings.get(i).toLowerCase().concat(".")
                     : nameSubstrings.get(i).toLowerCase());
 
         System.out.print("@gmail.com");
+
     }
 }
